@@ -1,19 +1,17 @@
 import React from "react";
+import "./Footer.css";
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="content has-text-centered">
         <p>
-          <strong>Bulma</strong> by{" "}
-          <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is
-          licensed
-          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The
-          website content is licensed{" "}
-          <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-            CC BY NC SA 4.0
-          </a>
-          .
+          <strong>Contributors</strong>{" "}
+          <a href="https://github.com/karlavalentina85">
+            Karla Silva <i class="fa fa-github" aria-hidden="true"></i>
+          </a>{" "}
+          <a href="https://github.com/christopherm970">Chris Mims</a>{" "}
+          <a href="https://github.com/proflonghair07">Murphy Vaughn</a>
         </p>
       </div>
     </footer>
