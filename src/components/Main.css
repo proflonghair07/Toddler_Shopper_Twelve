@@ -1,6 +1,7 @@
 .container {
   height: 100%;
   background-color: #ffffba;
+  margin-top: 15px;
 }
 
 body {
@@ -16,4 +17,11 @@ td {
   font-size: 25px;
   vertical-align: baseline;
   background-color: #ffdfba;
+}
+
+.card {
+  width: 15rem;
+  height: 10rem;
+  background-color: #ffdfba;
+  font-size: 2rem;
 }
