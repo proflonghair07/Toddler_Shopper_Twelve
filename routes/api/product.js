@@ -10,8 +10,8 @@ router
 //     .get(controller.findById);
 
 router
-    .route('/:id/toys')
-    .get(productController.getToysForCategory);
+    .route('/:id')
+    .get(productController.findById);
 
 router
     .route('/category/:category')
