@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { projects } from "../data/projects";
-import ProjectCard from "./ProjectCard";
+// import { projects } from "../data/projects";
+// import ProjectCard from "./ProjectCard";
 import "./Main.css";
 
 function Main() {
@@ -14,29 +14,37 @@ function Main() {
           </Link>
         </div>
         <div class="column">
-          <div class="card">Board Games</div>
+        <Link to="/ActionFigures">
+          <div class="card">Action Figures</div>
+          </Link>
         </div>
         <div class="column">
-          <div class="card">Art Supplies</div>
+        <Link to="/BuildingToys">
+          <div class="card">Building Toys</div>
+          </Link>
         </div>
       </div>
       <div class="columns">
         <div class="column">
-          <div class="card">
-            <div class="card">Books</div>
-          </div>
+        <Link to="/ChildrenBooks">
+            <div class="card">Children Books</div>
+          </Link>
         </div>
         <div class="column">
-          <div class="card">Action Figures</div>
+        <Link to="/ToyVehicles">
+          <div class="card">Toy Vehicles</div>
+        </Link>
         </div>
         <div class="column">
-          <div class="card">Costumes</div>
+        <Link to="/KidsElectronicGames">
+          <div class="card">Kids Electronic Games</div>
+          </Link>
         </div>
       </div>
 
       <br></br>
 
-      <table className="table is-fullwidth is-striped is-hoverable">
+      {/* <table className="table is-fullwidth is-striped is-hoverable">
         <tbody>
           {projects.map((project) => (
             <ProjectCard
@@ -47,7 +55,7 @@ function Main() {
             />
           ))}
         </tbody>
-      </table>
+      </table> */}
     </main>
   );
 }
