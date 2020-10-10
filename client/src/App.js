@@ -11,8 +11,8 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <Main />
         <Switch>
+          <Route exact path="/"><Main /></Route>
           <Route exact path="/Dolls">
             <Dolls />
           </Route>
