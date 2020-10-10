@@ -1,10 +1,10 @@
 const router = require("express").Router();
 
-var categoryRoutes = require("./category");
+var productRoutes = require("./product");
 var sessionRoutes = require("./session");
 var cartRoutes = require("./cart")
 
-router.use("/category", categoryRoutes);
+router.use("/product", productRoutes);
 router.use("/session", sessionRoutes);
 router.use("/cart", cartRoutes);
 

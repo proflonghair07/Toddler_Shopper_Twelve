@@ -1,10 +1,10 @@
-const categoryController = require('../../controllers/categoryController');
-var controller = require('../../controllers/categoryController');
+const productController = require('../../controllers/productController');
+var controller = require('../../controllers/productController');
 var router = require('express').Router();
 
 router
     .route("/")
-    .get(categoryController.findAll);
+    .get(productController.findAll);
 
 router
     .route('/:id')
