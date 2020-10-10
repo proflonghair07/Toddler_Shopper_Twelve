@@ -1,9 +1,10 @@
+const categoryController = require('../../controllers/categoryController');
 var controller = require('../../controllers/categoryController');
 var router = require('express').Router();
 
 router
-    .route('/all')
-    .get(controller.findAll);
+    .route("/")
+    .get(categoryController.findAll);
 
 router
     .route('/:id')
