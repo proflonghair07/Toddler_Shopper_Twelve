@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 import "./Main.css";
 
 
-const Dolls = () => {
+const BuildingToys = () => {
   return (
     
     <main className="container">
@@ -23,4 +23,4 @@ const Dolls = () => {
     </main>
   );
 };
-export default Dolls;
+export default BuildingToys;
