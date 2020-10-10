@@ -1,26 +1,42 @@
 import React from "react";
-import { projects } from "../data/projects";
-import ProjectCard from "./ProjectCard";
+import API from "../util/API";
+import ProductCard from "./ProductCard";
 import "./Main.css";
 
+const category = "building toys";
 
-const BuildingToys = () => {
-  return (
-    
-    <main className="container">
-      <table className="table is-fullwidth is-striped is-hoverable">
-        <tbody>
-          {projects.map((project) => (
-            <ProjectCard
-              title={project.title}
-              image={project.image}
-              rating={project.rating}
-              rawPrice={project.rawPrice}
-            />
-          ))}
-        </tbody>
-      </table>
-    </main>
-  );
-};
+class BuildingToys extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {products: []};
+  }
+
+  componentDidMount(){
+    API.getProductsByCategory(category)
+      .then(res => this.setState({products: res.data}))
+      .catch(err => console.log(err));
+  }
+
+  render()
+  {
+    return (
+      <main className="container">
+        <table className="table is-fullwidth is-striped is-hoverable">
+          <tbody>
+            {this.state.products.map((product) => (
+              <ProductCard
+                title={product.title}
+                image={product.image}
+                rating={product.rating}
+                rawPrice={product.rawPrice}
+              />
+            ))}
+          </tbody>
+        </table>
+      </main>
+    );
+  }
+}
+
 export default BuildingToys;

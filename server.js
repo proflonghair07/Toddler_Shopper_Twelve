@@ -8,6 +8,10 @@ const PORT = process.env.PORT || 3002;
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
+
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -17,7 +21,7 @@ app.use(routes);
 
 //Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactcms"
+  process.env.MONGODB_URI || "mongodb://localhost/reactcms", { useUnifiedTopology: true, useNewUrlParser: true }
 );
 
 // Start the API server
