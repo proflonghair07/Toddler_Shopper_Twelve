@@ -1,43 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { projects } from "../data/projects";
-// import ProjectCard from "./ProjectCard";
 import "./Main.css";
 
 function Main() {
   return (
     <main className="container">
-      <div class="columns">
-        <div class="column">
+      <div class="columns is-centered">
+        <div class="column has-text-centered is-4">
           <Link to="/Dolls">
-            <div class="card">Dolls</div>
+            <div class="card is-centered">Dolls</div>
           </Link>
         </div>
-        <div class="column">
+        <div class="column has-text-centered is-4">
         <Link to="/ActionFigures">
-          <div class="card">Action Figures</div>
+          <div class="card is-centered">Action Figures</div>
           </Link>
         </div>
         <div class="column">
         <Link to="/BuildingToys">
-          <div class="card">Building Toys</div>
+          <div class="card is-centered">Building Toys</div>
           </Link>
         </div>
       </div>
-      <div class="columns">
+      <div class="columns is-centered">
         <div class="column">
         <Link to="/ChildrenBooks">
-            <div class="card">Children Books</div>
+            <div class="card is-centered is-vcentered">Children Books</div>
           </Link>
         </div>
         <div class="column">
         <Link to="/ToyVehicles">
-          <div class="card">Toy Vehicles</div>
+          <div class="card is-centered">Toy Vehicles</div>
         </Link>
         </div>
         <div class="column">
         <Link to="/KidsElectronicGames">
-          <div class="card">Kids Electronic Games</div>
+          <div class="card is-centered">Kids Electronic Games</div>
           </Link>
         </div>
       </div>
