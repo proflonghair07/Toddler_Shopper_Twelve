@@ -19,7 +19,6 @@ module.exports = {
         // put log out logic here
     },
     createUser: function (req, res) {
-
         var emailAddress = req.body.emailAddress;
         var password = req.body.password;
 
