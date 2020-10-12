@@ -14,6 +14,13 @@ function Navbar() {
             >
               Register
             </Link>
+            <br/>
+            <Link
+              to="/login"
+              className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
+            >
+              Login
+            </Link>
           <button class="button is-primary">
             Checkout <i class="fa fa-shopping-cart" aria-hidden="true"></i>
           </button>
