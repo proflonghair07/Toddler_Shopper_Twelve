@@ -10,6 +10,10 @@ main {
   min-height: 60vh;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
 body {
   background-color: #ffffba;
   height: 100%;

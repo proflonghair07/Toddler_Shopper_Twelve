@@ -1,0 +1,21 @@
+#login-card {
+  width: 40rem;
+  height: 25rem;
+  margin: auto;
+  margin-bottom: 8rem;
+  margin-top: 6rem;
+}
+
+.input {
+  width: 30rem;
+}
+
+#footer-font {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#email {
+  margin-top: 1rem;
+}

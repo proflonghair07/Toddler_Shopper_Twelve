@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Navbar from "../components/Header";
-import Footer from "../components/Footer";
-
+import LoginNav from "./LoginNav";
+import "./Login.css";
+import { Link } from "react-router-dom";
 import API from "../util/API";
 
 
@@ -58,9 +58,9 @@ class Register extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar />
+        <LoginNav />
 
-        <form className="form">
+        {/* <form className="form">
           <input
             value={this.state.emailAddress}
             name="emailAddress"
@@ -76,9 +76,42 @@ class Register extends Component {
             placeholder="Password"
           />
           <button onClick={this.handleFormSubmit}>Submit</button>
-        </form>
+        </form> */}
 
-        <Footer />
+        <div class="card is-center" id="login-card">
+          <header class="card-header">
+            <p class="card-header-title">Register</p>
+          </header>
+            <div class="field">
+              <label class="label" id="email">Email</label>
+              <div class="control">
+              <input class="input" 
+                  value={this.state.emailAddress}
+                  name="emailAddress"
+                  onChange={this.handleInputChange}
+                  type="text"
+                  placeholder="E-mail Address"></input>
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Password</label>
+              <div class="control">
+              <input class="input"
+                    value={this.state.password}
+                    name="password"
+                    onChange={this.handleInputChange}
+                    type="password"
+                    placeholder="Password"></input>
+              </div>
+            </div>
+            <button className="button is-primary" onClick={this.handleFormSubmit}>Register</button>
+            <Link to="/Main"><button className="button is-primary">Start Shopping</button></Link>
+            <div class="is-center" id="footer-font">Already a Member? Login <Link
+              to="/"
+              className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
+            ><a>here.</a></Link></div>
+        </div>
+
       </div>
     );
   }

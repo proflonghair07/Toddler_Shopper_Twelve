@@ -8,19 +8,23 @@ function Navbar() {
       <div className="hero-body">
         <div>
           <h1 className="title">Toddler Shopper</h1>
-          <Link
+          {/* <Link
               to="/register"
               className={window.location.pathname === "/register" ? "nav-link active" : "nav-link"}
             >
+              <button class="button is-primary">
               Register
+              </button>
             </Link>
             <br/>
             <Link
               to="/login"
               className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
             >
+              <button class="button is-primary">
               Login
-            </Link>
+              </button>
+            </Link> */}
           <button class="button is-primary">
             Checkout <i class="fa fa-shopping-cart" aria-hidden="true"></i>
           </button>
