@@ -29,7 +29,7 @@ class KidsElectronicGames extends React.Component {
                 title={product.title}
                 image={product.image}
                 rating={product.rating}
-                rawPrice={product.rawPrice}
+                rawPrice={product.price}
               />
             ))}
           </tbody>

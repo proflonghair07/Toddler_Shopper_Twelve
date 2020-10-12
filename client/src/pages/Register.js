@@ -44,6 +44,8 @@ class Register extends Component {
     } else {
       API.registerUser(this.state)
       .then(alert("User registered."));
+
+      localStorage.setItem('user', this.state.emailAddress);
     }
 
     this.setState({
