@@ -2,6 +2,7 @@ import React from "react";
 import { projects } from "../../data/projects";
 import ProjectCard from "../ProjectCard";
 import "./Main.css";
+import checkoutHeader from "./checkoutHeader";
 
 const Checkout = () => {
   return (
