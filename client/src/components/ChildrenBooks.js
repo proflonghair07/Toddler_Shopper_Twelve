@@ -29,7 +29,8 @@ class ChildrenBooks extends React.Component {
                 title={product.title}
                 image={product.image}
                 rating={product.rating}
-                rawPrice={product.rawPrice}
+                rawPrice={product.price}
+                productId={product._id}
               />
             ))}
           </tbody>
