@@ -1,13 +1,20 @@
+const User = require('../models/user');
 var userModel = require('../models/user');
 
 module.exports = {
     login: function (req, res) {
+    
         userModel.find({ emailAddress: req.body.emailAddress })
             .then(userModel => {
                 // results are an array.  Use first index.  You will want to safety code this when there are no results
                 if(req.body.password == userModel[0].password){
                     // hook session creation here.  Refer to your previous exercise where you had a log in.
-                    res.send(200);
+                    console.log(userModel)
+                    const user = {
+                        email: userModel[0].emailAddress,
+                        _id: userModel[0]._id
+                    }
+                    res.json(user);
                 } else{
                     res.send(401);
                 }

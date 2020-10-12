@@ -6,6 +6,11 @@ import { Link } from "react-router-dom";
 
 
 class Login extends Component {
+
+  constructor(props){
+    super()
+
+  }
   state = {
     emailAddress: "",
     password: ""
@@ -43,7 +48,17 @@ class Login extends Component {
       );
     } else {
       API.loginUser(this.state)
-      .then(alert("Logged in."));
+      .then((res)=>{
+        console.log(res)
+        this.props.setUser(res.data)
+        // alert("Logged in.")
+        if(res.data._id){
+          window.location.href = '/Main'
+        
+        }
+
+      }
+        );
 
       localStorage.setItem('user', this.state.emailAddress);
     }

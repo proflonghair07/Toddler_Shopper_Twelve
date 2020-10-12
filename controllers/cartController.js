@@ -4,6 +4,9 @@ module.exports = {
         // put logic to get the current card, or cart based on the id.  If not using a cart from DB and just using session, you will not need the ID.
     },
     addToyToCart: function(req, res) {
+        //need user id
+
+
         res.send(`Adding toy ${req.params.id} to cart`);
         // Parameters should be email address and product id
 

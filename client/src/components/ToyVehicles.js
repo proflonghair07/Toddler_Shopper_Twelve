@@ -26,6 +26,7 @@ class ToyVehicles extends React.Component {
           <tbody>
             {this.state.products.map((product) => (
               <ProductCard
+                key={product._id}
                 title={product.title}
                 image={product.image}
                 rating={product.rating}

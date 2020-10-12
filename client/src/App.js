@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Register from "./pages/Register";
@@ -20,30 +20,33 @@ import KidsElectronicGames from "./components/KidsElectronicGames";
 import KidsElectronicGamesNav from "./components/Category_Navs/KidsElectronicGamesNav";
 
 function App() {
+
+  const [user, setUser] = useState(null)
+
   return (
     <Router>
       <div className="App">
         <Switch>
-          <Route exact path="/Main"><Navbar /><Main /></Route>
+          <Route exact path="/Main"><Navbar /><Main user={user} /></Route>
           <Route exact path="/register" component={Register} />
-          <Route exact path="/" component={Login} />
+          <Route exact path="/" render={()=> <Login setUser={setUser}/>} />
           <Route exact path="/Dolls">
             <DollsNav /><Dolls />
           </Route>
           <Route exact path="/ActionFigures">
-            <ActionFiguresNav /><ActionFigures />
+            <ActionFiguresNav user={user}/><ActionFigures />
           </Route>
           <Route exact path="/BuildingToys">
-            <BuildingToysNav /><BuildingToys />
+            <BuildingToysNav user={user}/><BuildingToys />
           </Route>
           <Route exact path="/ChildrenBooks">
-            <ChildrenBooksNav /><ChildrenBooks />
+            <ChildrenBooksNav user={user}/><ChildrenBooks />
           </Route>
           <Route exact path="/ToyVehicles">
-            <ToyVehiclesNav /><ToyVehicles />
+            <ToyVehiclesNav user={user}/><ToyVehicles />
           </Route>
           <Route exact path="/KidsElectronicGames">
-            <KidsElectronicGamesNav /><KidsElectronicGames />
+            <KidsElectronicGamesNav user={user}/><KidsElectronicGames />
           </Route>
         </Switch>
         <Footer />
