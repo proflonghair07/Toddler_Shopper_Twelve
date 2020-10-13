@@ -8,34 +8,34 @@ function Main() {
       <div class="columns is-centered">
         <div class="column has-text-centered is-4">
           <Link to="/Dolls">
-            <div class="card is-centered">Dolls</div>
+            <div class="card is-centered grow"><div class="card-text">Dolls</div></div>
           </Link>
         </div>
         <div class="column has-text-centered is-4">
         <Link to="/ActionFigures">
-          <div class="card is-centered">Action Figures</div>
+          <div class="card is-centered grow"><div class="card-text">Action Figures</div></div>
           </Link>
         </div>
         <div class="column">
         <Link to="/BuildingToys">
-          <div class="card is-centered">Building Toys</div>
+          <div class="card is-centered grow"><div class="card-text">Building Toys</div></div>
           </Link>
         </div>
       </div>
       <div class="columns is-centered">
         <div class="column">
         <Link to="/ChildrenBooks">
-            <div class="card is-centered is-vcentered">Children Books</div>
+            <div class="card is-centered grow is-vcentered"><div class="card-text">Children's Books</div></div>
           </Link>
         </div>
         <div class="column">
         <Link to="/ToyVehicles">
-          <div class="card is-centered">Toy Vehicles</div>
+          <div class="card is-centered grow"><div class="card-text">Toy Vehicles</div></div>
         </Link>
         </div>
         <div class="column">
         <Link to="/KidsElectronicGames">
-          <div class="card is-centered">Kids Electronic Games</div>
+          <div class="card is-centered grow"><div class="card-text">Electronic Games</div></div>
           </Link>
         </div>
       </div>
