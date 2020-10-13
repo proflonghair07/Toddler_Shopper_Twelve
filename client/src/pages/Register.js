@@ -78,7 +78,7 @@ class Register extends Component {
           <button onClick={this.handleFormSubmit}>Submit</button>
         </form> */}
 
-        <div class="card is-center" id="login-card">
+        <div class="card is-center grow" id="login-card">
           <header class="card-header">
             <p class="card-header-title">Register</p>
           </header>

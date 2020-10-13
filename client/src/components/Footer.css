@@ -2,3 +2,17 @@
   background-color: #bae1ff;
   margin-bottom: 0 !important;
 }
+
+strong {
+  color: black !important;
+}
+
+a {
+  transition: all 0.25s ease-in-out;
+  color: black !important;
+}
+
+a:hover {
+  color: #222222 !important;
+  transform: scale(1.07);
+}
