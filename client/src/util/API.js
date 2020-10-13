@@ -12,4 +12,7 @@ export default {
   loginUser: function(userInfo) {
     return axios.post('/api/user/login', userInfo);
   },  
+  handlePost: function(productId,userId){
+  return axios.post(`/api/add/${productId}`); 
+  }
 };
