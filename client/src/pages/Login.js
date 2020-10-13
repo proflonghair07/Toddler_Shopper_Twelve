@@ -15,13 +15,7 @@ class Login extends Component {
     emailAddress: "",
     password: ""
   };
-
-  // When the component mounts, load the next dog to be displayed
-  componentDidMount() {
     
-  }
-
-  
     
   handleInputChange = event => {
     // Getting the value and name of the input which triggered the change
@@ -126,7 +120,7 @@ class Login extends Component {
             <div class="is-center" id="footer-font">Not a member yet? Create an account <Link
               to="/register"
               className={window.location.pathname === "/register" ? "nav-link active" : "nav-link"}
-            ><a>here.</a></Link></div>
+            >here</Link></div>
         </div>
 
       </div>

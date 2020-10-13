@@ -8,6 +8,7 @@ router
 router
     .route('/add/:id')
     .post(controller.addToyToCart);
+    //add user id as param as well and a product id
 
 router
     .route('/remove/:id')

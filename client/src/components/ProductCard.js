@@ -1,8 +1,7 @@
 import React from "react";
-
-export default function ProjectCard(props) {
+import API from "../util/API";
+export default function ProductCard(props) {
   const { title, image, rating, rawPrice, productId, userId } = props;
-
 
   return (
     <tr>
@@ -14,11 +13,7 @@ export default function ProjectCard(props) {
       <td>{rawPrice}</td>
       <td>
        
-        <form onSubmit={()=>props.handlePost(productId, userId)}> 
-        {/* <form method= "POST" action={"/api/cart/add" + productId}> */}
-          {/* <input name= "emailAddress" type="hidden" val={userEmailAddress} /> */}
-          <submit class="button is-warning">Add to Wishlist!</submit>
-        </form>
+        <button onClick={()=>API.handlePost(productId, userId)}> Add to Wishlist!</button>
       </td>
     </tr>
   );
