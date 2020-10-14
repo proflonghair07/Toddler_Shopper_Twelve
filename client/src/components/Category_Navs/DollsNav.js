@@ -8,9 +8,11 @@ function DollsNav() {
       <div className="hero-body">
         <div>
           <h1 className="title">Dolls</h1>
+          <Link to="/Checkout">
           <button class="button is-primary">
             Checkout <i class="fa fa-shopping-cart" aria-hidden="true"></i>
           </button>
+          </Link>
           <Link to="/Main">
           <button class="button is-primary">
             Return Home <i class="fa fa-shopping-cart" aria-hidden="true"></i>
