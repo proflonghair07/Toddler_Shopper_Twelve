@@ -3,20 +3,20 @@ import LoginNav from "./LoginNav";
 import "./Login.css";
 import API from "../util/API";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+
+
 
 
 class Login extends Component {
 
-  constructor(props){
-    super()
 
-  }
   state = {
     emailAddress: "",
-    password: ""
+    password: "",
   };
-    
-    
+
+
   handleInputChange = event => {
     // Getting the value and name of the input which triggered the change
     let value = event.target.value;
@@ -30,8 +30,9 @@ class Login extends Component {
       [name]: value
     });
   };
-
+  
   handleFormSubmit = event => {
+  
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
     if (!this.state.emailAddress) {
@@ -47,8 +48,8 @@ class Login extends Component {
         this.props.setUser(res.data)
         // alert("Logged in.")
         if(res.data._id){
-          window.location.href = '/Main'
-        
+        // 
+        this.props.history.push('/Main')
         }
 
       }

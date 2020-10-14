@@ -18,10 +18,12 @@ import ToyVehicles from "./components/ToyVehicles";
 import ToyVehiclesNav from "./components/Category_Navs/ToyVehiclesNav";
 import KidsElectronicGames from "./components/KidsElectronicGames";
 import KidsElectronicGamesNav from "./components/Category_Navs/KidsElectronicGamesNav";
+import { useHistory } from "react-router-dom";
 
 function App() {
 
   const [user, setUser] = useState(null)
+  
 
   return (
     <Router>
@@ -29,12 +31,12 @@ function App() {
         <Switch>
           <Route exact path="/Main"><Navbar /><Main user={user} /></Route>
           <Route exact path="/register" component={Register} />
-          <Route exact path="/" render={()=> <Login setUser={setUser}/>} />
+          <Route exact path="/" render={(props)=> <Login history={props.history} setUser={setUser}/>} />
           <Route exact path="/Dolls">
             <DollsNav /><Dolls />
           </Route>
           <Route exact path="/ActionFigures">
-            <ActionFiguresNav user={user}/><ActionFigures />
+            <ActionFiguresNav /><ActionFigures user={user}/>
           </Route>
           <Route exact path="/BuildingToys">
             <BuildingToysNav user={user}/><BuildingToys />
