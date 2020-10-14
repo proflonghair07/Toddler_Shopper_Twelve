@@ -7,7 +7,7 @@ function Navbar() {
     <section className="hero">
       <div className="hero-body">
         <div>
-          <h1 className="title">Toddler Shopper</h1>
+          <h1 className="title animate__animated animate__backInLeft animate__fast">Toddler Shopper</h1>
           {/* <Link
               to="/register"
               className={window.location.pathname === "/register" ? "nav-link active" : "nav-link"}
