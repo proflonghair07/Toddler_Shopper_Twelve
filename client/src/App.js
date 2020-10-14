@@ -18,6 +18,8 @@ import ToyVehicles from "./components/ToyVehicles";
 import ToyVehiclesNav from "./components/Category_Navs/ToyVehiclesNav";
 import KidsElectronicGames from "./components/KidsElectronicGames";
 import KidsElectronicGamesNav from "./components/Category_Navs/KidsElectronicGamesNav";
+import Checkout from "./components/Checkout/Checkout";
+import CheckoutHeader from "./components/Checkout/checkoutHeader";
 
 function App() {
 
@@ -47,6 +49,9 @@ function App() {
           </Route>
           <Route exact path="/KidsElectronicGames">
             <KidsElectronicGamesNav user={user}/><KidsElectronicGames />
+          </Route>
+          <Route exact path="/Checkout">
+            <CheckoutHeader user={user}/><Checkout />
           </Route>
         </Switch>
         <Footer />

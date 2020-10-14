@@ -3,18 +3,20 @@ import "../Header.css";
 import { Link } from "react-router-dom";
 
 
-function checkoutHeader() {
+function CheckoutHeader() {
   return (
     <section className="hero">
       <div className="hero-body">
         <div>
           <h1 className="title">Checkout</h1>
+          <Link to="/Main">
           <button class="button is-primary">
-            Go Home <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            Return Home <i class="fa fa-shopping-cart" aria-hidden="true"></i>
           </button>
+          </Link>
         </div>
       </div>
     </section>
   );
 }
-export default checkoutHeader;
+export default CheckoutHeader;
