@@ -31,30 +31,35 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route exact path="/Main"><Navbar /><Main user={user} /></Route>
           <Route exact path="/register" component={Register} />
           <Route exact path="/" render={(props)=> <Login history={props.history} setUser={setUser}/>} />
+        {user ? ( 
+          <>
+          <Route exact path="/Main"><Navbar /><Main user={user} /></Route>
           <Route exact path="/Dolls">
-            <DollsNav /><Dolls />
+            <DollsNav user={user}/><Dolls user={user}/>
           </Route>
           <Route exact path="/ActionFigures">
-            <ActionFiguresNav /><ActionFigures user={user}/>
+            <ActionFiguresNav user={user}/><ActionFigures user={user}/>
           </Route>
           <Route exact path="/BuildingToys">
-            <BuildingToysNav user={user}/><BuildingToys />
+            <BuildingToysNav user={user}/><BuildingToys user={user}/>
           </Route>
           <Route exact path="/ChildrenBooks">
-            <ChildrenBooksNav user={user}/><ChildrenBooks />
+            <ChildrenBooksNav user={user}/><ChildrenBooks user={user}/>
           </Route>
           <Route exact path="/ToyVehicles">
-            <ToyVehiclesNav user={user}/><ToyVehicles />
+            <ToyVehiclesNav user={user}/><ToyVehicles user={user}/>
           </Route>
           <Route exact path="/KidsElectronicGames">
-            <KidsElectronicGamesNav user={user}/><KidsElectronicGames />
+            <KidsElectronicGamesNav user={user}/><KidsElectronicGames user={user}/>
           </Route>
           <Route exact path="/Checkout">
-            <CheckoutHeader user={user}/><Checkout />
+            <CheckoutHeader user={user}/><Checkout user={user}/>
           </Route>
+          </>
+        ):null}
+          
         </Switch>
         <Footer />
       </div>

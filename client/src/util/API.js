@@ -6,6 +6,10 @@ export default {
     category = encodeURI(category);
     return axios.get(`/api/product/category/${category}`);
   },
+  getProductsFromCart: function(userId) {
+   
+    return axios.get(`/api/cart/checkout`,{userId});
+  },
   registerUser: function(userInfo) {
     return axios.post('/api/user/create', userInfo);
   },  
@@ -13,6 +17,11 @@ export default {
     return axios.post('/api/user/login', userInfo);
   },  
   handlePost: function(productId,userId){
-  return axios.post(`/api/add/${productId}`); 
+    const payload = {
+      userId,
+      productId
+    }
+    console.log(payload)
+  return axios.post(`/api/cart/add`, payload); 
   }
 };
