@@ -1,3 +1,5 @@
+const db = require("../models")
+const ObjectId = require('mongoose').Types.ObjectId; 
 module.exports = {
     getByEmail: function(req, res) {
         res.send(`Getting cart ${req.params.id}`);
@@ -6,8 +8,35 @@ module.exports = {
     addToyToCart: function(req, res) {
         //need user id
 
+        const query = { user: new ObjectId(req.body.userId) };
 
-        res.send(`Adding toy ${req.params.id} to cart`);
+        db.Cart.find(query).then((userCart)=>{
+            console.log('adding to cart')
+            console.log(userCart)
+            if(userCart.length <1){                
+                db.Cart.create({user:req.body.userId, products:[req.body.productId]}).then((cartDb)=>{
+                    console.log('creating new cart')
+                    console.log(cartDb)
+                    res.json(cartDb)
+                }).catch((err)=> {
+                    console.log(err)
+                    res.json(err)
+                })
+            }else{
+                db.Cart.findOneAndUpdate({user:req.body.userId},
+                    {"$push": {"products": req.body.productId }}
+                    ).then((cartDb)=>{
+                        console.log('updating existing cart')
+                        console.log(cartDb)
+                        res.json(cartDb)
+                    }).catch((err)=> {
+                        console.log(err)
+                        res.json(err)
+                    })
+            }
+       
+        })
+
         // Parameters should be email address and product id
 
         // put logic to add toy, based on the toy's id, to a cart.
@@ -23,7 +52,19 @@ module.exports = {
         // probably want to add cart ID to this.
     },
     checkout: function(req, res) {
-        res.send(`Checking out for cart id ${req.params.id}`);
+
+        console.log("checkout route*****")
+        const query = { user: new ObjectId(req.body.userId) };
+        db.Cart.find(query).then((userCart)=>{
+            console.log('adding to cart')
+            console.log(userCart)
+        }).populate("products").then((data)=>{
+            res.json(data)
+        }).catch((err)=>{
+            console.log(err)
+            res.json(err)
+        })
+        
     },
     clear: function(req, res) {
         res.send(`Canceling order for cart id ${req.params.id}`);

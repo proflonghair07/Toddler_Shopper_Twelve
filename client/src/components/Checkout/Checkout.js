@@ -14,9 +14,14 @@ class Checkout extends React.Component {
   }
 
   componentDidMount(){
-    API.getProductsByCategory(category)
-      .then(res => this.setState({products: res.data}))
-      .catch(err => console.log(err));
+      
+
+    API.getProductsFromCart(this.props.user._id)
+    .then(res => {
+      console.log(res)
+      this.setState({products: res.data})
+    })
+    .catch(err => console.log(err));
   }
 
   render()
@@ -26,7 +31,7 @@ class Checkout extends React.Component {
         <table className="table is-fullwidth is-striped is-hoverable animate__animated animate__fadeInUp animate__fast">
           <thead class="is-centered">Your Wishlist!</thead>
           <tbody>
-            {this.state.products.map((product) => (
+            {/* {this.state.products.map((product) => (
               <CheckoutCard
                 key={product._id}
                 title={product.title}
@@ -34,8 +39,9 @@ class Checkout extends React.Component {
                 rating={product.rating}
                 rawPrice={product.price}
                 productId={product._id}
+                userId={this.props.user ? this.props.user._id : null}
               />
-            ))}
+            ))} */}
             {/* placeholder code just to show something on the page.  Will be deleted once table is functioning properly. */}
             <tr>
               <td>

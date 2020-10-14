@@ -6,7 +6,7 @@ router
     .get(controller.getByEmail);
 
 router
-    .route('/add/:id')
+    .route('/add')
     .post(controller.addToyToCart);
     //add user id as param as well and a product id
 
@@ -15,7 +15,7 @@ router
     .delete(controller.removeToyFromCart);
 
 router
-    .route('/checkout/:id')
+    .route('/checkout')
     .post(controller.checkout);
 
 router
