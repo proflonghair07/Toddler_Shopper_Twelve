@@ -21,9 +21,11 @@ import KidsElectronicGamesNav from "./components/Category_Navs/KidsElectronicGam
 import Checkout from "./components/Checkout/Checkout";
 import CheckoutHeader from "./components/Checkout/checkoutHeader";
 
+
 function App() {
 
   const [user, setUser] = useState(null)
+  
 
   return (
     <Router>
@@ -31,12 +33,12 @@ function App() {
         <Switch>
           <Route exact path="/Main"><Navbar /><Main user={user} /></Route>
           <Route exact path="/register" component={Register} />
-          <Route exact path="/" render={()=> <Login setUser={setUser}/>} />
+          <Route exact path="/" render={(props)=> <Login history={props.history} setUser={setUser}/>} />
           <Route exact path="/Dolls">
             <DollsNav /><Dolls />
           </Route>
           <Route exact path="/ActionFigures">
-            <ActionFiguresNav user={user}/><ActionFigures />
+            <ActionFiguresNav /><ActionFigures user={user}/>
           </Route>
           <Route exact path="/BuildingToys">
             <BuildingToysNav user={user}/><BuildingToys />
