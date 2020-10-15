@@ -8,7 +8,7 @@ export default {
   },
   getProductsFromCart: function(userId) {
    
-    return axios.get(`/api/cart/checkout`,{userId});
+    return axios.get(`/api/cart/checkout/${userId}`);
   },
   registerUser: function(userInfo) {
     return axios.post('/api/user/create', userInfo);

@@ -1,9 +1,9 @@
 var controller = require('../../controllers/cartController');
 var router = require('express').Router();
 
-router
-    .route('/:id')
-    .get(controller.getByEmail);
+// router
+    // .route('/get:id')
+    // .get(controller.getByEmail);
 
 router
     .route('/add')
@@ -15,8 +15,8 @@ router
     .delete(controller.removeToyFromCart);
 
 router
-    .route('/checkout')
-    .post(controller.checkout);
+    .route('/checkout/:id')
+    .get(controller.checkout);
 
 router
     .route('/clear/:id')
