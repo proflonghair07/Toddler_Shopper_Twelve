@@ -57,20 +57,24 @@ module.exports = {
         console.log(req.params.id);
         const query = { user: new ObjectId(req.params.id) };
         
-        db.Cart.find( query ).then((userCart)=> {
-            console.log(userCart);
-        })
-        // db.Cart.find(query).then((userCart)=>{
-        //     console.log('adding to cart')
-        //     console.log(userCart)
-        // }).populate("products").then((data)=>{
-        //     res.json(data)
-        // }).catch((err)=>{
-        //     console.log(err)
-        //     res.json(err)
-        //     console.log();
-        // })
-        
+//        db.Cart.find( query ).then((userCart)=> {
+//            console.log(userCart);
+//        })
+         db.Cart.find(query).populate("products")
+         .then((userCart)=>{
+//             console.log('adding to cart')
+//             console.log(userCart)
+             res.json(userCart)
+         })
+//         .populate("products")
+//         .then((data)=>{
+//             res.json(data)
+//         })
+         .catch((err)=>{
+             console.log(err)
+             res.json(err)
+             console.log();
+         })
     },
     clear: function(req, res) {
         res.send(`Canceling order for cart id ${req.params.id}`);

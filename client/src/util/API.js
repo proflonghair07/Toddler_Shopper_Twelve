@@ -23,5 +23,9 @@ export default {
     }
     console.log(payload)
   return axios.post(`/api/cart/add`, payload); 
+  },
+  getProductsFromCart: function(userid) {
+//    userid = encodeURI(userid);
+    return axios.get(`/api/cart/checkout/${userid}`);
   }
 };

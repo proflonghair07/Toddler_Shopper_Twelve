@@ -31,6 +31,8 @@ class KidsElectronicGames extends React.Component {
                 image={product.image}
                 rating={product.rating}
                 rawPrice={product.price}
+                productId={product._id}
+                userId={this.props.user ? this.props.user._id : null}
               />
             ))}
           </tbody>

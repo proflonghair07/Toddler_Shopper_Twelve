@@ -13,8 +13,6 @@ export default function CheckoutCard(props) {
       <td>{rawPrice}</td>
       <td>
        
-        <button  class="button is-primary" id="checkout-button" onClick={()=>API.handlePost(productId, userId)}> Add to Wishlist!</button>
-        <button class="button is-danger" id="checkout-button" onClick={()=>API.handlePost(productId, userId)}> Remove from Wish!</button>
       </td>
     </tr>
   );

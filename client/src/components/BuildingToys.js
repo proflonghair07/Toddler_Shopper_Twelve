@@ -32,6 +32,7 @@ class BuildingToys extends React.Component {
                 rating={product.rating}
                 rawPrice={product.price}
                 productId={product._id}
+                userId={this.props.user ? this.props.user._id : null}
               />
             ))}
           </tbody>

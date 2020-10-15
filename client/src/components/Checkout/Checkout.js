@@ -18,8 +18,9 @@ class Checkout extends React.Component {
 
     API.getProductsFromCart(this.props.user._id)
     .then(res => {
-      console.log(res)
-      this.setState({products: res.data})
+      console.log(res.data["0"].products)
+
+      this.setState({products: res.data["0"].products})
     })
     .catch(err => console.log(err));
   }
@@ -31,7 +32,7 @@ class Checkout extends React.Component {
         <table className="table is-fullwidth is-striped is-hoverable animate__animated animate__fadeInUp animate__fast">
           <thead class="is-centered">Your Wishlist!</thead>
           <tbody>
-            {/* {this.state.products.map((product) => (
+          {this.state.products.map((product) => (
               <CheckoutCard
                 key={product._id}
                 title={product.title}
@@ -41,22 +42,8 @@ class Checkout extends React.Component {
                 productId={product._id}
                 userId={this.props.user ? this.props.user._id : null}
               />
-            ))} */}
-            {/* placeholder code just to show something on the page.  Will be deleted once table is functioning properly. */}
-            <tr>
-              <td>
-              <img className="card-img-top" src="https://m.media-amazon.com/images/I/81SpJfojd7L._AC_UL320_.jpg" alt="page screenshot"></img>
-              </td>
-              <td>L.O.L. Surprise! O.M.G. Lights Groovy Babe Fashion Doll with 15 Surprises</td>
-              <td>4.8</td>
-              <td>$20.99</td>
-              <td>
-       
-              <button class="button is-primary" id="checkout-button"> Add to Wishlist!</button>
-              <button class="button is-danger" id="checkout-button"> Remove from Wish!</button>
-              </td>
-            </tr>
-            {/* end of placeholder */}
+            ))}
+
           </tbody>
         </table>
       </main>
