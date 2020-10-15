@@ -54,16 +54,22 @@ module.exports = {
     checkout: function(req, res) {
 
         console.log("checkout route*****")
-        const query = { user: new ObjectId(req.body.userId) };
-        db.Cart.find(query).then((userCart)=>{
-            console.log('adding to cart')
-            console.log(userCart)
-        }).populate("products").then((data)=>{
-            res.json(data)
-        }).catch((err)=>{
-            console.log(err)
-            res.json(err)
+        console.log(req.params.id);
+        const query = { user: new ObjectId(req.params.id) };
+        
+        db.Cart.find( query ).then((userCart)=> {
+            console.log(userCart);
         })
+        // db.Cart.find(query).then((userCart)=>{
+        //     console.log('adding to cart')
+        //     console.log(userCart)
+        // }).populate("products").then((data)=>{
+        //     res.json(data)
+        // }).catch((err)=>{
+        //     console.log(err)
+        //     res.json(err)
+        //     console.log();
+        // })
         
     },
     clear: function(req, res) {
