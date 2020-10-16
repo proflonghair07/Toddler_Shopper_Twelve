@@ -77,8 +77,19 @@ module.exports = {
          })
     },
     clear: function(req, res) {
-        res.send(`Canceling order for cart id ${req.params.id}`);
 
-        // Parameters should be email address.
+//        res.send(`Canceling order for cart id ${req.params.id}`);
+
+//        const query = { _id: req.params.id };
+        
+                 db.Cart.findByIdAndDelete(req.params.id)
+                 .then(()=>{
+                     res.json({'message': 'Cart deleted'});
+                 })
+                 .catch((err)=>{
+                     console.log(err)
+                     res.json(err)
+                     console.log();
+                 })
     }
 }

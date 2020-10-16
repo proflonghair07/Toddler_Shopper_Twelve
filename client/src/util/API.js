@@ -27,5 +27,8 @@ export default {
   getProductsFromCart: function(userid) {
 //    userid = encodeURI(userid);
     return axios.get(`/api/cart/checkout/${userid}`);
+  },
+  deleteAll: function(cartId) {
+    return axios.delete(`/api/cart/clear/${cartId}`);
   }
 };
