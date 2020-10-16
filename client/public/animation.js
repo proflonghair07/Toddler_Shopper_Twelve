@@ -8,7 +8,7 @@ const mouseHoverAnimation = () => {
         width: '10rem',
         scale: {
             delay: 100,
-            value: 1.5
+            value: 1.15
         },
         duration: 1500
     })

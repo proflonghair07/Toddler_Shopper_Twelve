@@ -30,7 +30,7 @@ class Checkout extends React.Component {
     return (
       <main className="container">
         <table className="table is-fullwidth is-striped is-hoverable animate__animated animate__fadeInUp animate__fast">
-          <thead class="is-centered">Your Wishlist!</thead>
+          {/* <thead className="has-text-centered"><div class="has-text-centered.has-text-centered">Your Wishlist!</div></thead> */}
           <tbody>
           {this.state.products.map((product) => (
               <CheckoutCard
@@ -43,9 +43,10 @@ class Checkout extends React.Component {
                 userId={this.props.user ? this.props.user._id : null}
               />
             ))}
-
+          
           </tbody>
         </table>
+        <button className="button is-primary animate__animated animate__pulse animate__infinite	infinite" id="checkout-now">Checkout Now!</button>
       </main>
     );
   }

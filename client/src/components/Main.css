@@ -57,6 +57,7 @@ body > footer {
 .table {
   margin-top: 15px;
   margin-bottom: 15px;
+  background-color: #ffdfba;
 }
 
 td {
@@ -71,4 +72,13 @@ td {
   background-color: #ffdfba;
   font-size: 2rem;
   margin-left: 4rem;
+}
+
+#checkout-now {
+  width: 25rem;
+  height: 10rem;
+  font-size: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
 }
