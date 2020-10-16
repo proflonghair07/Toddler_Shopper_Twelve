@@ -54,9 +54,11 @@ function App() {
           <Route exact path="/KidsElectronicGames">
             <KidsElectronicGamesNav user={user}/><KidsElectronicGames user={user}/>
           </Route>
-          <Route exact path="/Checkout">
-            <CheckoutHeader user={user}/><Checkout user={user}/>
-          </Route>
+          <Route exact path="/Checkout" render={(props)=> (
+            <>
+            <CheckoutHeader user={user}/><Checkout history={props.history} user={user}/>
+            </>
+          )}/>
           </>
         ):null}
           

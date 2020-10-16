@@ -23,7 +23,7 @@ module.exports = {
                     res.json(err)
                 })
             }else{
-                db.Cart.findOneAndUpdate({user:req.body.userId},
+                db.Cart.findOneAndUpdate(query,
                     {"$push": {"products": req.body.productId }}
                     ).then((cartDb)=>{
                         console.log('updating existing cart')
@@ -43,7 +43,25 @@ module.exports = {
         // probably want to add cart ID to this.
     },
     removeToyFromCart: function(req, res) {
-        res.send(`Remove toy ${req.params.id} from cart`);
+
+        console.log(req)
+        const query = { user: new ObjectId(req.body.userId) };
+        const reomveProd = {products: req.body.productId}
+        console.log(reomveProd)
+        // Favorite.updateOne( {cn: req.params.name}, { $pullAll: {uid: [req.params.deleteUid] } } )
+
+        db.Cart.findOneAndUpdate(query,
+            {"$pull": reomveProd}
+            ).then((cartDb)=>{
+                console.log('reomving item from cart')
+                console.log(cartDb)
+                res.json(cartDb)
+            }).catch((err)=> {
+                console.log(err)
+                res.json(err)
+            })
+
+       
 
         // Parameters should be email address and product id.
 

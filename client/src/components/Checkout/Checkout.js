@@ -29,6 +29,19 @@ class Checkout extends React.Component {
     .catch(err => console.log(err));
   }
 
+  getCartItems = ()=>{
+    console.log('user id', this.props.user._id)
+    API.getProductsFromCart(this.props.user._id)
+    .then(res => {
+      console.log(res.data);
+      console.log(res.data["0"].products);
+      console.log(res.data["0"]._id);
+
+      this.setState({products: res.data["0"].products,cartId: res.data["0"]._id})
+    })
+    .catch(err => console.log(err));
+  }
+
   handleDeleteCart = event => {
     API.deleteAll(this.state.cartId)
     .then(res => {
@@ -53,6 +66,7 @@ class Checkout extends React.Component {
                 rawPrice={product.price}
                 productId={product._id}
                 userId={this.props.user ? this.props.user._id : null}
+                getCartItems={this.getCartItems}
               />
             ))}
           

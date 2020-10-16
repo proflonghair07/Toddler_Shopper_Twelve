@@ -10,9 +10,10 @@ router
     .post(controller.addToyToCart);
     //add user id as param as well and a product id
 
+
 router
-    .route('/remove/:id')
-    .delete(controller.removeToyFromCart);
+    .route('/remove')
+    .post(controller.removeToyFromCart);
 
 router
     .route('/checkout/:id')
