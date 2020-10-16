@@ -83,8 +83,8 @@ module.exports = {
 //        const query = { _id: req.params.id };
         
                  db.Cart.findByIdAndDelete(req.params.id)
-                 .then((userCart)=>{
-                     res.json({"message": "Cart deleted"});
+                 .then(()=>{
+                     res.json({'message': 'Cart deleted'});
                  })
                  .catch((err)=>{
                      console.log(err)

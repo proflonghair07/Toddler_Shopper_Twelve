@@ -4,6 +4,7 @@ import CheckoutCard from "./CheckoutCard"
 import "../Main.css";
 import "./Checkout.css";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 const category = "checkout";
 
@@ -29,7 +30,7 @@ class Checkout extends React.Component {
   }
 
   handleDeleteCart = event => {
-    axios.delete(`/api/cart/clear/${this.state.cartId}`)
+    API.deleteAll(this.state.cartId)
     .then(res => {
       this.props.history.push('/Main');
     })

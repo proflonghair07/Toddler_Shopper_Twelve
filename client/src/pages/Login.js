@@ -49,7 +49,7 @@ class Login extends Component {
         // alert("Logged in.")
         if(res.data._id){
         // 
-        this.props.history.push('/Main')
+          this.props.history.push('/Main')
         }
 
       }
