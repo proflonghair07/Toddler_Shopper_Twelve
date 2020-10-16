@@ -11,9 +11,8 @@ export default function CheckoutCard(props) {
       <td>{title}</td>
       <td>{rating}</td>
       <td>{rawPrice}</td>
-      <td>
+      <td><button class="button is-danger"> Remove from Wishlist!</button></td>
        
-      </td>
     </tr>
   );
 }

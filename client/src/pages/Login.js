@@ -117,7 +117,7 @@ class Login extends Component {
               </div>
             </div>
             <button className="button is-primary" onClick={this.handleFormSubmit}>Login</button>
-            <Link to="/Main"><button className="button is-primary">Start Shopping</button></Link>
+            
             <div class="is-center" id="footer-font">Not a member yet? Create an account <Link
               to="/register"
               className={window.location.pathname === "/register" ? "nav-link active" : "nav-link"}

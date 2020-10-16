@@ -105,7 +105,7 @@ class Register extends Component {
               </div>
             </div>
             <button className="button is-primary" onClick={this.handleFormSubmit}>Register</button>
-            <Link to="/Main"><button className="button is-primary">Start Shopping</button></Link>
+            
             <div class="is-center" id="footer-font">Already a Member? Login <Link
               to="/"
               className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
