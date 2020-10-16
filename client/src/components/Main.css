@@ -82,3 +82,11 @@ td {
   margin-right: auto;
   margin-bottom: 2rem;
 }
+
+#truck {
+  width: 50rem;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
