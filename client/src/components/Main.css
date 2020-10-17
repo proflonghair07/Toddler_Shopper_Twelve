@@ -36,6 +36,7 @@ body > footer {
 
 .card-text {
   margin-top: 5.5rem;
+  background-color: #ffdfbacc;
 }
 
 /* card hover */
@@ -89,4 +90,51 @@ td {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+/* category background images */
+#dolls {
+  background-image: url("https://cimages.personalcreations.com/is/image/planetartdmc/PCR17_17S494BL_SMLSS_CP_SQ?$PCRProductImage$&wid=446");
+  background-color: #ffdfba;
+  background-blend-mode: darken;
+}
+
+#action-figures {
+  background-image: url("https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6434/6434278_sd.jpg;maxHeight=640;maxWidth=550");
+  background-repeat: no-repeat;
+  background-color: #ffdfba;
+  background-blend-mode: darken;
+}
+
+#electronic-games {
+  background-image: url("https://www.thoughtco.com/thmb/Ejixsw3UQoitJFSJoWgzhV90P0I=/400x250/filters:no_upscale():max_bytes(150000):strip_icc()/close-up-of-joystick-over-white-background-953230088-5c5f14de46e0fb00014421f6.jpg");
+  background-repeat: no-repeat;
+  background-color: #ffdfba;
+  background-blend-mode: darken;
+}
+
+#toy-vehicles {
+  background-image: url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/1-red-retro-wooden-toy-car-isolated-on-white-background-michal-bednarek.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: #ffdfba;
+  background-blend-mode: darken;
+}
+
+#building-toys {
+  background-image: url("https://images.creativemarket.com/0.1.0/ps/7520030/1819/1214/m1/fpnw/wm0/12.29.2019-4-.jpg?1577640838&s=59a166e8e6a995e669a7c83fd34dc5be");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: #ffdfba;
+  background-blend-mode: darken;
+}
+
+#children-books {
+  background-image: url("https://news.gsu.edu/files/2019/05/Stack-of-childrens-books-4.19.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: #ffdfba;
+  background-blend-mode: darken;
 }
