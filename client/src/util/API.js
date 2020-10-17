@@ -24,11 +24,15 @@ export default {
     console.log(payload)
   return axios.post(`/api/cart/add`, payload); 
   },
-  getProductsFromCart: function(userid) {
-//    userid = encodeURI(userid);
-    return axios.get(`/api/cart/checkout/${userid}`);
-  },
   deleteAll: function(cartId) {
     return axios.delete(`/api/cart/clear/${cartId}`);
+  },
+  removeItem: function(userId, productId){
+    const payload = {
+        userId,
+        productId
+    }
+    console.log(payload)
+    return axios.post(`/api/cart/remove`, payload);
   }
 };
