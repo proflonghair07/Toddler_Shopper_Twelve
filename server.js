@@ -21,7 +21,8 @@ app.use(routes);
 
 //Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactcms", { useUnifiedTopology: true, useNewUrlParser: true }
+  process.env.MONGODB_URI || "mongodb://localhost/reactcms", { useUnifiedTopology: true, useNewUrlParser: true,
+  useFindAndModify: false }
 );
 
 // Start the API server
