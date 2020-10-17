@@ -3,6 +3,7 @@ import API from "../../util/API";
 import CheckoutCard from "./CheckoutCard"
 import "../Main.css";
 import "./Checkout.css";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 
@@ -72,8 +73,10 @@ class Checkout extends React.Component {
           
           </tbody>
         </table>
-
+        <Link to="/CheckoutTruck">
+          
         <button className="button is-primary animate__animated animate__pulse animate__infinite	infinite" id="checkout-now" onClick={this.handleDeleteCart}>Checkout Now!</button>
+        </Link>
       </main>
     );
   }

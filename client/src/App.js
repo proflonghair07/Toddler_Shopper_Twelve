@@ -20,6 +20,7 @@ import KidsElectronicGames from "./components/KidsElectronicGames";
 import KidsElectronicGamesNav from "./components/Category_Navs/KidsElectronicGamesNav";
 import Checkout from "./components/Checkout/Checkout";
 import CheckoutHeader from "./components/Checkout/checkoutHeader";
+import CheckoutTruck from "./components/Checkout/CheckoutTruck";
 
 
 function App() {
@@ -53,6 +54,9 @@ function App() {
           </Route>
           <Route exact path="/KidsElectronicGames">
             <KidsElectronicGamesNav user={user}/><KidsElectronicGames user={user}/>
+          </Route>
+          <Route exact path="/CheckoutTruck">
+            <CheckoutHeader user={user}/><CheckoutTruck user={user}/>
           </Route>
           <Route exact path="/Checkout" render={(props)=> (
             <>
