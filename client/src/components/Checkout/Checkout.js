@@ -46,7 +46,8 @@ class Checkout extends React.Component {
   handleDeleteCart = event => {
     API.deleteAll(this.state.cartId)
     .then(res => {
-      this.props.history.push('/Main');
+      // this.props.history.push('/Main');
+      this.props.history.push('/CheckoutTruck');
     })
     .catch(err => console.log(err));
   }
@@ -73,10 +74,9 @@ class Checkout extends React.Component {
           
           </tbody>
         </table>
-        <Link to="/CheckoutTruck">
           
         <button className="button is-primary animate__animated animate__pulse animate__infinite	infinite" id="checkout-now" onClick={this.handleDeleteCart}>Checkout Now!</button>
-        </Link>
+     
       </main>
     );
   }
