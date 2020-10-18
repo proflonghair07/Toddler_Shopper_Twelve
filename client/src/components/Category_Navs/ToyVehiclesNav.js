@@ -9,12 +9,12 @@ function ToyVehiclesNav() {
         <div>
           <h1 className="title">Toy Vehicles</h1>
           <Link to="/Checkout">
-          <button class="button is-primary">
+          <button class="button is-info">
             Checkout <i class="fa fa-shopping-cart" aria-hidden="true"></i>
           </button>
           </Link>
           <Link to="/Main">
-          <button class="button is-primary">
+          <button class="button is-info">
             Return Home <i class="fas fa-home"></i>
           </button>
           </Link>

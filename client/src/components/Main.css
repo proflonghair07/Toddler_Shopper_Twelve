@@ -35,8 +35,8 @@ body > footer {
 }
 
 .card-text {
-  margin-top: 5.5rem;
-  background-color: #ffdfbacc;
+  margin-top: 9rem;
+  background-color: #e79c73cc;
   backdrop-filter: blur(1px);
   color: black;
 }
@@ -64,9 +64,11 @@ body > footer {
 }
 
 td {
+  font-family: "Montserrat", sans-serif !important;
   font-size: 25px;
   vertical-align: baseline;
   background-color: #ffdfba;
+  text-align: left !important;
 }
 
 .card {
@@ -91,7 +93,7 @@ td {
 }
 
 #truck {
-  width: 50rem;
+  width: 30rem;
   height: auto;
   display: block;
   margin-left: auto;

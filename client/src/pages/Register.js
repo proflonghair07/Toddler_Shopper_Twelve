@@ -104,7 +104,7 @@ class Register extends Component {
                     placeholder="Password"></input>
               </div>
             </div>
-            <button className="button is-primary" onClick={this.handleFormSubmit}>Register</button>
+            <button className="button is-info" onClick={this.handleFormSubmit}>Register</button>
             
             <div class="is-center" id="footer-font">Already a Member? Login <Link
               to="/"
