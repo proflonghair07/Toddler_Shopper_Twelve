@@ -15,7 +15,7 @@ function ActionFiguresNav() {
           </Link>
           <Link to="/Main">
           <button class="button is-primary">
-            Return Home <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            Return Home {" "}<i class="fas fa-home"></i>
           </button>
           </Link>
         </div>

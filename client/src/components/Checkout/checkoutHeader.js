@@ -11,7 +11,7 @@ function CheckoutHeader() {
           <h1 className="title">Checkout</h1>
           <Link to="/Main">
           <button class="button is-primary">
-            Return Home <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            Return Home <i class="fas fa-home"></i>
           </button>
           </Link>
         </div>

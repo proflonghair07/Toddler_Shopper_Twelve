@@ -9,7 +9,7 @@ export default function ProductCard(props) {
         <img className="card-img-top" src={image} alt="page screenshot"></img>
       </td>
       <td>{title}</td>
-      <td>{rating}</td>
+      <td>{rating}<i class="fas fa-star"></i></td>
       <td>{rawPrice}</td>
       <td>
        
