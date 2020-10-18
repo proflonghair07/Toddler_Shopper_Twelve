@@ -10,6 +10,7 @@ strong {
 a {
   transition: all 0.25s ease-in-out;
   color: black !important;
+  transition: all 0.25s ease-in-out;
 }
 
 a:hover {

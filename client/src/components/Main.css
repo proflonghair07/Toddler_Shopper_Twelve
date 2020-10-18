@@ -37,6 +37,8 @@ body > footer {
 .card-text {
   margin-top: 5.5rem;
   background-color: #ffdfbacc;
+  backdrop-filter: blur(1px);
+  color: black;
 }
 
 /* card hover */
@@ -73,6 +75,10 @@ td {
   background-color: #ffdfba;
   font-size: 2rem;
   margin-left: 4rem;
+}
+
+.fa-star {
+  color: #ffb646;
 }
 
 #checkout-now {

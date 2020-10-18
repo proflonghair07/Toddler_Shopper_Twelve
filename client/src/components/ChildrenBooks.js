@@ -22,7 +22,7 @@ class ChildrenBooks extends React.Component {
   {
     return (
       <main className="container">
-        <table className="table is-fullwidth is-striped is-hoverable">
+        <table className="table is-fullwidth is-striped is-hoverable animate__animated animate__rubberBand animate__fast">
           <tbody>
             {this.state.products.map((product) => (
               <ProductCard
