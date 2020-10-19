@@ -32,6 +32,9 @@ export default {
     return axios.delete(`/api/cart/clear/${cartId}`);
   },
   removeItem: function(userId, productId){
+    const audioEl = document.getElementsByClassName("audio-element")[0];
+    audioEl.play();
+
     const payload = {
         userId,
         productId
