@@ -5,6 +5,9 @@
   
   ## Description
   A MERN application game designed for little kids who want to pretend shopping. Easy and Safe UI for children.
+
+  ## Deployed Version
+  https://mighty-woodland-98663.herokuapp.com/
   
   ## Screenshot
   ![toddlershopper](https://user-images.githubusercontent.com/63941758/96482534-71e48100-1201-11eb-8126-b5b4ce4f013c.jpg)
