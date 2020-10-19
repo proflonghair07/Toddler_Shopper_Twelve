@@ -1,5 +1,7 @@
 import React from "react";
 import API from "../../util/API";
+import rmbutton from "./delete.mp3";
+
 export default function CheckoutCard(props) {
   const { title, image, rating, rawPrice, productId, userId } = props;
 
@@ -18,7 +20,9 @@ export default function CheckoutCard(props) {
       <td>{rating}<i class="fas fa-star"></i></td>
       <td>{rawPrice}</td>
       <td><button class="button is-danger" onClick={()=> handleRemove(userId,productId) }> Remove from Cart!</button></td>
-       
+      <audio className="audio-element">
+          <source src={rmbutton}></source>
+        </audio>
     </tr>
   );
 }
