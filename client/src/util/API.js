@@ -1,4 +1,5 @@
 import axios from "axios";
+import atcsound from "./scannerbip.mp3";
 
 export default {
   // Gets all products by category
@@ -17,6 +18,9 @@ export default {
     return axios.post('/api/user/login', userInfo);
   },  
   handlePost: function(productId,userId){
+    const audioEl = document.getElementsByClassName("audio-element")[0];
+    audioEl.play();
+
     const payload = {
       userId,
       productId
