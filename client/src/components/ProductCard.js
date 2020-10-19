@@ -1,5 +1,8 @@
 import React from "react";
 import API from "../util/API";
+import atcsound from "./scannerbip.mp3";
+
+
 export default function ProductCard(props) {
   const { title, image, rating, rawPrice, productId, userId } = props;
 
@@ -14,6 +17,10 @@ export default function ProductCard(props) {
       <td>
        
         <button class="button is-info" onClick={()=>API.handlePost(productId, userId)}> Add to Cart!</button>
+
+        <audio className="audio-element">
+          <source src={atcsound}></source>
+        </audio>
       </td>
     </tr>
   );
