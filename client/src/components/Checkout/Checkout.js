@@ -75,7 +75,7 @@ class Checkout extends React.Component {
           </tbody>
         </table>
           
-        <button className="button is-primary animate__animated animate__pulse animate__infinite	infinite" id="checkout-now" onClick={this.handleDeleteCart}>Checkout Now!</button>
+        <button className="button is-info animate__animated animate__pulse animate__infinite	infinite" id="checkout-now" onClick={this.handleDeleteCart}>Checkout Now!</button>
      
       </main>
     );

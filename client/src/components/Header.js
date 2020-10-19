@@ -26,7 +26,7 @@ function Navbar() {
               </button>
             </Link> */}
           <Link to="/Checkout">
-          <button class="button is-primary">
+          <button class="button is-info">
             Checkout <i class="fa fa-shopping-cart" aria-hidden="true"></i>
           </button>
           </Link>

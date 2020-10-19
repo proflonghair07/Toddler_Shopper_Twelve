@@ -116,7 +116,7 @@ class Login extends Component {
                 placeholder="Password"></input>
               </div>
             </div>
-            <button className="button is-primary" onClick={this.handleFormSubmit}>Login</button>
+            <button className="button is-info" onClick={this.handleFormSubmit}>Login</button>
             
             <div class="is-center" id="footer-font">Not a member yet? Create an account <Link
               to="/register"

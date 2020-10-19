@@ -13,7 +13,7 @@ export default function ProductCard(props) {
       <td>{rawPrice}</td>
       <td>
        
-        <button class="button is-primary" onClick={()=>API.handlePost(productId, userId)}> Add to Wishlist!</button>
+        <button class="button is-info" onClick={()=>API.handlePost(productId, userId)}> Add to Cart!</button>
       </td>
     </tr>
   );

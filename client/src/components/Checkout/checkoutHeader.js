@@ -10,7 +10,7 @@ function CheckoutHeader() {
         <div>
           <h1 className="title">Checkout</h1>
           <Link to="/Main">
-          <button class="button is-primary">
+          <button class="button is-info">
             Return Home <i class="fas fa-home"></i>
           </button>
           </Link>
